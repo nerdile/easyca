@@ -5,6 +5,10 @@ if [[ ! -f "requests/$1/signed.pem" ]]; then
   exit 1
 fi
 
+if [[ ! -f "openssl.cnf" ]]; then
+  cp openssl.example.cnf openssl.cnf
+fi
+
 pushd requests/$1
 cat signed.pem cachain.pem private.pem >$1-private.pem
 cp signed.pem $1.cer

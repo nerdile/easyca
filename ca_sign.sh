@@ -10,6 +10,10 @@ if [[ ! -d "requests/$2" ]]; then
   exit 2
 fi
 
+if [[ ! -f "openssl.cnf" ]]; then
+  cp openssl.example.cnf openssl.cnf
+fi
+
 pushd ca/$1
 openssl ca -extensions v3_server -out ../../requests/$2/signed.pem -config ./openssl.cnf -infiles ../../requests/$2/request.pem
 popd

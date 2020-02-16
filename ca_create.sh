@@ -16,6 +16,10 @@ fi
 
 mkdir ca/$1
 
+if [[ ! -f "openssl.cnf" ]]; then
+  cp openssl.example.cnf openssl.cnf
+fi
+
 cp openssl.cnf ca/$1/.
 
 pushd ca/$1

@@ -4,4 +4,6 @@ certs/
 *.crt
 *.pem
 *.cer
+openssl.cnf
+requests.cnf
 
