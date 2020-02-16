@@ -11,7 +11,7 @@ if [[ ! -d "requests/$2" ]]; then
 fi
 
 pushd ca/$1
-openssl ca -out ../../requests/$2/signed.pem -config ./openssl.cnf -infiles ../../requests/$2/request.pem
+openssl ca -extensions v3_server -out ../../requests/$2/signed.pem -config ./openssl.cnf -infiles ../../requests/$2/request.pem
 popd
 
 cp ca/$1/cachain.pem requests/$2/cachain.pem
