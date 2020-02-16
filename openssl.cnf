@@ -12,7 +12,7 @@ req_extensions = v3_req
 default_ca = CA_default
 
 [ CA_default ]
-dir = ./CA  # Where everything is kept
+dir = .  # Where everything is kept
 serial = $dir/serial   # The current serial number
 database = $dir/index.txt # database index file.
 new_certs_dir = $dir/issued  # default place for new certs.
@@ -86,9 +86,9 @@ countryName_max = 2
 commonName = Common Name (e.g. server FQDN or YOUR name)
 commonName_max = 64
 
-0.organizationName_default = My org name
+0.organizationName_default = Maison Strommen-Guittard
 #1.organizationName_default = My sub org name
-organizationalUnitName_default = My org unit
+organizationalUnitName_default = Maison.Tech
 localityName_default = Seattle
 stateOrProvinceName_default = Washington
 countryName_default = US

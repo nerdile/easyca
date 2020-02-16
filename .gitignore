@@ -1,4 +1,7 @@
-data/
+ca/
+requests/
+certs/
 *.crt
 *.pem
+*.cer
 
