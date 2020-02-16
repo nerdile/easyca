@@ -14,8 +14,8 @@ if [[ ! -f "requests.cnf" ]]; then
 fi
 
 mkdir requests/$1
-cp requests.cnf requests/$1/openssl.cnf
-vi requests/$1/openssl.cnf
+cp requests.cnf requests/$1/request.cnf
+vi requests/$1/request.cnf
 
 ./req_create.sh $1
 
